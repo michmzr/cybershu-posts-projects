@@ -29,14 +29,12 @@ public class WeatherHistoryHourlyDeserializer extends JsonDeserializer<WeatherHi
         List<LocalDateTime> time = new LinkedList<>();
         List<Float> temperatures = new LinkedList<>();
 
-        final var timesNode = node.get("time");
-        timesNode.forEach(jsonNode -> {
+        node.get("time").forEach(jsonNode -> {
             String timeVal = jsonNode.asText();
             time.add(LocalDateTime.parse(timeVal, TIMESTAMP_PARSER));
         });
 
-        final var temperatureNode = node.get("temperature_2m");
-        temperatureNode.forEach(jsonNode -> {
+        node.get("temperature_2m").forEach(jsonNode -> {
             String temp = jsonNode.asText();
             temperatures.add(Float.parseFloat(temp));
         });

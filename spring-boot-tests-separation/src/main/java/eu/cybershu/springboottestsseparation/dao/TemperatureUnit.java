@@ -3,9 +3,9 @@ package eu.cybershu.springboottestsseparation.dao;
 public enum TemperatureUnit {
     CELSIUS("celsius"), FAHRENHEIT("fahrenheit");
 
-    private final String name;
+    public final String tempUnitName;
 
-    TemperatureUnit(String name) {
-        this.name = name;
+    TemperatureUnit(String tempUnitName) {
+        this.tempUnitName = tempUnitName;
     }
 }

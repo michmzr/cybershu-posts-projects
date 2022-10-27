@@ -4,9 +4,9 @@ package eu.cybershu.springboottestsseparation.dao;
 public enum WindspeedUnit {
     MS("ms"), MPH("mph"), KN("kn");
 
-    private final String name;
+    public final String windUnitName;
 
-    WindspeedUnit(String name) {
-        this.name = name;
+    WindspeedUnit(String windUnitName) {
+        this.windUnitName = windUnitName;
     }
 }
